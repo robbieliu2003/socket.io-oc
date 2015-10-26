@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ags-Mb-1I7">
+                                <rect key="frame" x="0.0" y="20" width="600" height="520"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="EJT-gv-Qs0"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="Tuq-8R-3Hg"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XHd-Ia-oDa">
+                                <rect key="frame" x="0.0" y="540" width="600" height="60"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gec-Ah-xHL">
+                                        <rect key="frame" x="10" y="8" width="540" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T10-OI-Ot8">
+                                        <rect key="frame" x="560" y="8" width="30" height="44"/>
+                                        <state key="normal" title="发送">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="send:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="i0v-Xr-iyx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="T10-OI-Ot8" secondAttribute="trailing" constant="10" id="CNU-59-cbr"/>
+                                    <constraint firstAttribute="height" constant="60" id="F6Q-zZ-Jyj"/>
+                                    <constraint firstAttribute="bottom" secondItem="T10-OI-Ot8" secondAttribute="bottom" constant="8" id="Gga-sc-QTR"/>
+                                    <constraint firstItem="T10-OI-Ot8" firstAttribute="leading" secondItem="Gec-Ah-xHL" secondAttribute="trailing" constant="10" id="OUn-BL-FLi"/>
+                                    <constraint firstItem="Gec-Ah-xHL" firstAttribute="top" secondItem="XHd-Ia-oDa" secondAttribute="top" constant="8" id="Uzu-9e-Vhl"/>
+                                    <constraint firstItem="T10-OI-Ot8" firstAttribute="top" secondItem="XHd-Ia-oDa" secondAttribute="top" constant="8" id="Yca-ff-pMf"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gec-Ah-xHL" secondAttribute="bottom" constant="8" id="aMk-kW-tAM"/>
+                                    <constraint firstItem="Gec-Ah-xHL" firstAttribute="leading" secondItem="XHd-Ia-oDa" secondAttribute="leading" constant="10" id="pxf-kh-1u5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="XHd-Ia-oDa" secondAttribute="trailing" id="4IP-ve-oBQ"/>
+                            <constraint firstAttribute="trailing" secondItem="Ags-Mb-1I7" secondAttribute="trailing" id="7X1-pW-OLl"/>
+                            <constraint firstItem="XHd-Ia-oDa" firstAttribute="top" secondItem="Ags-Mb-1I7" secondAttribute="bottom" id="S9F-iG-zxt"/>
+                            <constraint firstAttribute="bottom" secondItem="XHd-Ia-oDa" secondAttribute="bottom" id="Yim-TX-yPA"/>
+                            <constraint firstItem="Ags-Mb-1I7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="hRj-jc-F1H"/>
+                            <constraint firstItem="XHd-Ia-oDa" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="krh-rS-0QF"/>
+                            <constraint firstItem="Ags-Mb-1I7" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="uVZ-RH-OCI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Ags-Mb-1I7" id="eQ5-jl-Eo8"/>
+                        <outlet property="textInput" destination="Gec-Ah-xHL" id="m1d-bm-fKq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

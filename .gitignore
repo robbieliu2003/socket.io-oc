@@ -1,0 +1,7 @@
+Podfile.lock
+Pods
+socket-chat.xcworkspace
+socket-chat.xcodeproj/xcuserdata/
+socket-chat.xcodeproj/project.xcworkspace/
+.gitignore.swp
+*.DS_Store
